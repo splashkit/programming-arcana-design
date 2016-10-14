@@ -1,0 +1,57 @@
+window {
+  @extend callout;
+  $border-color: #ADADAD;
+  $border-radius: 5px;
+  $title-height: 24px;
+  // Title bar
+  &::before {
+    content: attr(title);
+    text-align: center;
+    font-family: -apple-system, "Helvetica Neue", "Lucida Grande", "Arial";
+    font-size: 14px;
+    color: #525152;
+    line-height: 23px;
+    display: block;
+    position: absolute;
+    top: -$title-height;
+    left: 0;
+    right: 0;
+    height: $title-height;
+    background-image: url('data:image/svg+xml;utf8,<svg width="62" height="19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M6 11.5C2.962434 11.5.5 9.037566.5 6S2.962434.5 6 .5s5.5 2.462434 5.5 5.5-2.462434 5.5-5.5 5.5z" id="a"/><linearGradient x1="21.328125%" y1="21.1111111%" x2="21.328125%" y2="163.333333%" id="b"><stop stop-color="#FF5E51" offset="0%"/><stop stop-color="#FF5E51" offset="100%"/></linearGradient><path d="M6 11.5C2.962434 11.5.5 9.037566.5 6S2.962434.5 6 .5s5.5 2.462434 5.5 5.5-2.462434 5.5-5.5 5.5z" id="d"/><linearGradient x1="21.796875%" y1="21.1111111%" x2="21.796875%" y2="22.7777778%" id="e"><stop stop-color="#FF5E51" offset="0%"/><stop stop-color="#FF5E51" offset="100%"/></linearGradient><path d="M6 11.5C2.96243 11.5.5 9.037566.5 6S2.96243.5 6 .5s5.5 2.462434 5.5 5.5-2.46243 5.5-5.5 5.5z" id="g"/><linearGradient x1="22.890625%" y1="21.1111111%" x2="22.890625%" y2="163.333333%" id="h"><stop stop-color="#FFC100" offset="0%"/><stop stop-color="#FFC100" offset="100%"/></linearGradient><path d="M6 11.5C2.96243 11.5.5 9.037566.5 6S2.96243.5 6 .5s5.5 2.462434 5.5 5.5-2.46243 5.5-5.5 5.5z" id="j"/><linearGradient x1="23.359375%" y1="21.1111111%" x2="23.359375%" y2="22.7777778%" id="k"><stop stop-color="#FFC100" offset="0%"/><stop stop-color="#FFC100" offset="100%"/></linearGradient><path d="M6 11.5C2.96243 11.5.5 9.037566.5 6S2.96243.5 6 .5s5.5 2.462434 5.5 5.5-2.46243 5.5-5.5 5.5z" id="m"/><linearGradient x1="24.453125%" y1="21.1111111%" x2="24.453125%" y2="163.333333%" id="n"><stop stop-color="#0ECE32" offset="0%"/><stop stop-color="#0ECE32" offset="100%"/></linearGradient><path d="M6 11.5C2.96243 11.5.5 9.037566.5 6S2.96243.5 6 .5s5.5 2.462434 5.5 5.5-2.46243 5.5-5.5 5.5z" id="p"/><linearGradient x1="24.921875%" y1="21.1111111%" x2="24.921875%" y2="22.7777778%" id="q"><stop stop-color="#0ECE32" offset="0%"/><stop stop-color="#0ECE32" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><g transform="translate(9 6)"><mask id="c" fill="#fff"><use xlink:href="#a"/></mask><path fill="url(#b)" mask="url(#c)" d="M-273 568h1280v-720H-273"/></g><g transform="translate(9 6)"><mask id="f" fill="#fff"><use xlink:href="#d"/></mask><path fill="url(#e)" mask="url(#f)" d="M-273 568h1280v-720H-273"/></g><path d="M15 18c3.313708 0 6-2.686292 6-6s-2.686292-6-6-6-6 2.686292-6 6 2.686292 6 6 6z" stroke="#E4443A"/><g transform="translate(29 6)"><mask id="i" fill="#fff"><use xlink:href="#g"/></mask><path fill="url(#h)" mask="url(#i)" d="M-293 568H987v-720H-293"/></g><g transform="translate(29 6)"><mask id="l" fill="#fff"><use xlink:href="#j"/></mask><path fill="url(#k)" mask="url(#l)" d="M-293 568H987v-720H-293"/></g><path d="M35 18c3.313708 0 6-2.686292 6-6s-2.686292-6-6-6-6 2.686292-6 6 2.686292 6 6 6z" stroke="#E2A200"/><g><g transform="translate(49 6)"><mask id="o" fill="#fff"><use xlink:href="#m"/></mask><path fill="url(#n)" mask="url(#o)" d="M-313 568H967v-720H-313"/></g><g transform="translate(49 6)"><mask id="r" fill="#fff"><use xlink:href="#p"/></mask><path fill="url(#q)" mask="url(#r)" d="M-313 568H967v-720H-313"/></g></g><path d="M55 18c3.313708 0 6-2.686292 6-6s-2.686292-6-6-6-6 2.686292-6 6 2.686292 6 6 6z" stroke="#00AE19"/></g></svg>'), linear-gradient(to bottom, #f8f6f8 0%, #eeebee 7%, #ece9ec 18%, #dcd9dc 100%);
+    background-repeat: no-repeat;
+    border: 1px solid $border-color;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  font-family: 'Menlo', 'Monaco', monospace;
+  white-space: pre;
+  color: #313131;
+  position: relative;
+  display: block;
+  margin-top: $callout-margin-separator + $title-height;
+  padding-right: $title-height / 2 - 10px;
+  padding-bottom: $title-height / 2;
+  padding-left: $title-height / 2 - 1px;
+  box-shadow: inset 0px 0px 0px 1px $border-color, 0px 8px 30px 0px rgba(0,0,0,0.25);
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  max-width: 600px;
+  height: attr(height);
+  height: auto;
+}
+
+terminal {
+  @extend window;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  &::before {
+    content: "Terminal";
+  }
+}
+
+text-editor {
+  @extend window;
+  &::before {
+    content: "Text Editor";
+  }
+}
