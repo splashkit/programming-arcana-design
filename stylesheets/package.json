@@ -1,0 +1,15 @@
+{
+  "name": "programming-arcana-stylesheets",
+  "version": "1.0.0",
+  "description": "Stylesheets for Arcana",
+  "author": "Alex Cummaudo",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "concat": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
