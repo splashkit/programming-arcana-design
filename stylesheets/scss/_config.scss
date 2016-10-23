@@ -1,9 +1,38 @@
 //
 // Place all settings you want to have in here first
 //
-@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
+//===
+// SVG Background
+//===
+@function svg($code) {
+  @return url("data:image/svg+xml;utf8,#{$code}");
+}
+//===
+// Callouts
+//===
 $callout-margin-separator: 30px;
-callout {
+@mixin callout {
+  display: block;
   margin: $callout-margin-separator auto;
 }
+//===
+// Monospace
+//===
+@mixin monospace {
+  font-family: 'Menlo', 'Monaco', monospace;
+}
+code, pre {
+  @include monospace;
+}
+//===
+// Colors
+//===
+$color-task: #238C35;
+$color-artefact: #B92927;
+$color-terminology: #673AB7;
+$color-action: #4D6F9B;
+$color-hint: #67BFC5;
+$color-note: #FED149;
+$color-tip: #77BB41;
+$color-experiment: #8560F5;
